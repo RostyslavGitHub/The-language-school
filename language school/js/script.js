@@ -1,3 +1,5 @@
+"use strict"
+
 const burgerMenu = document.querySelector('.burger-menu');
 const burgerMenuIcon = document.querySelector('.burger-menu-icon');
 if (burgerMenu){
@@ -48,7 +50,7 @@ sliderNextBtn.addEventListener('click', () => {
 });
 
 const showMoreInfo = document.getElementsByClassName('service__item__name');
-/*const downArrow = document.getElementsByClassName('arrow-down');*/
+const serviceArrow = document.getElementsByClassName('arrow');
   
 
 if(showMoreInfo){
@@ -56,7 +58,7 @@ if(showMoreInfo){
     showMoreInfo[i].addEventListener('click', function(){
     const moreInfo = document.getElementsByClassName('service__item__more-info');
     moreInfo[i].classList.toggle('_show-more-info');
-    /*downArrow[i].classList.toggle('rotate225');*/
+    serviceArrow[i].classList.toggle('_active-arrow');
 
 
   });
