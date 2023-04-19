@@ -47,3 +47,18 @@ sliderNextBtn.addEventListener('click', () => {
   }
 });
 
+const showMoreInfo = document.getElementsByClassName('service__item__name');
+/*const downArrow = document.getElementsByClassName('arrow-down');*/
+  
+
+if(showMoreInfo){
+  for (let i = 0; i < showMoreInfo.length; i++){
+    showMoreInfo[i].addEventListener('click', function(){
+    const moreInfo = document.getElementsByClassName('service__item__more-info');
+    moreInfo[i].classList.toggle('_show-more-info');
+    /*downArrow[i].classList.toggle('rotate225');*/
+
+
+  });
+
+}};
