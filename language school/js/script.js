@@ -2,12 +2,21 @@
 
 const burgerMenu = document.querySelector('.burger-menu');
 const burgerMenuIcon = document.querySelector('.burger-menu-icon');
+const headerNavLink = document.getElementsByClassName('header__nav__link');
+
 if (burgerMenu){
   burgerMenuIcon.addEventListener("click", function (e) {
     burgerMenu.classList.toggle('_active-burger-menu');
     burgerMenuIcon.classList.toggle('_closed-burger_menu_icon');
   });
+  for (let i = 0; i < headerNavLink.length; i++){
+    headerNavLink[i].addEventListener("click", function(e){
+      burgerMenu.classList.remove('_active-burger-menu');
+      burgerMenuIcon.classList.remove('_closed-burger_menu_icon');
+    })
+  }
 };
+
 
 const slider = document.querySelector('.slider');
 const sliderItems = document.querySelectorAll('.slider__item');
@@ -64,3 +73,25 @@ if(showMoreInfo){
   });
 
 }};
+
+let inputElement = document.getElementsByClassName("input");
+
+if (inputElement) {
+  for (let i = 0; i < inputElement.length; i++) {
+    inputElement[i].addEventListener("focus", function() {
+      if (inputElement[i].value === "name" || inputElement[i].value === "number or e-mail"){
+        inputElement[i].value = "";
+      } 
+    });
+    inputElement[i].addEventListener("blur", function() {
+      if (inputElement[i].value === ""){ 
+        if(i === 0){
+          inputElement[i].value = "name";
+        } else if (i === 1){
+          inputElement[i].value = "number or e-mail";
+        }
+      }
+    });
+  }
+}
+
