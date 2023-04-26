@@ -79,19 +79,59 @@ let inputElement = document.getElementsByClassName("input");
 if (inputElement) {
   for (let i = 0; i < inputElement.length; i++) {
     inputElement[i].addEventListener("focus", function() {
-      if (inputElement[i].value === "name" || inputElement[i].value === "number or e-mail"){
+      if (inputElement[i].value === "NAME" || inputElement[i].value === "NUMBER OR E-MAIL"){
         inputElement[i].value = "";
       } 
     });
     inputElement[i].addEventListener("blur", function() {
       if (inputElement[i].value === ""){ 
-        if(i === 0){
-          inputElement[i].value = "name";
-        } else if (i === 1){
-          inputElement[i].value = "number or e-mail";
+        if(i === 0 ){
+          inputElement[i].value = "NAME";
+        } else if (i === 1 ){
+          inputElement[i].value = "NUMBER OR E-MAIL";
+        } else if(i === 2 ){
+          inputElement[i].value = "NAME";
+        } else if (i === 3 ){
+          inputElement[i].value = "NUMBER OR E-MAIL";
         }
       }
     });
   }
 }
 
+const popUpButton = document.getElementsByClassName("popup-button");
+const successPopUpButton = document.getElementsByClassName("success-popup-button");
+const popUp = document.querySelector(".popup")
+const popUpArea = document.querySelector(".popup-area");
+const successPopUp = document.querySelector(".success-popup")
+if(popUpButton){
+  for (let i = 0; i < popUpButton.length; i++){
+    popUpButton[i].addEventListener("click", function() {
+      popUp.classList.toggle("_active-popup");
+      popUpArea.classList.toggle("_active-popup");
+      
+    })
+  }
+};
+
+let removeSuccessPopUp = () => successPopUp.classList.remove("_active-popup");
+if(successPopUpButton){
+  for (let i = 0; i < successPopUpButton.length; i++){
+    successPopUpButton[i].addEventListener("click", function(){
+      popUp.classList.remove("_active-popup");
+      successPopUp.classList.add("_active-popup");
+      popUpArea.classList.remove("_active-popup");
+      setTimeout(removeSuccessPopUp, 1300);
+      
+  })
+}
+};
+
+if(popUpArea){
+  popUpArea.addEventListener("click", function() {
+    popUp.classList.remove("_active-popup");
+    successPopUp.classList.remove("_active-popup");
+    popUpArea.classList.toggle("_active-popup");
+
+  })
+}

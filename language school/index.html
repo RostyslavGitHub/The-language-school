@@ -3,7 +3,7 @@
 	<head>
 		<title>Your Lang</title>
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="icon" href="img/icons/main-icon.ico">
+		<link rel="icon" href="img/icons/logo.png">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
 
@@ -178,7 +178,7 @@
 							</li>
 							<div class="service__line"></div>
 						
-							<button class="button">Try basic!</button>
+							<button class="button popup-button">Try basic!</button>
 						</ul>
 					</div>
 					<div class="service__item">
@@ -188,7 +188,7 @@
 						<div class="arrow"></div>
 						<ul class="service__item__more-info">	
 							<li class="service__common service__item__schedule">
-								2 lessons in a month
+								4 lessons in a month
 							</li>
 							<div class="service__line"></div>
 							<li class="service__common service__item__time">one lesson is 1 hour 30 minutes</li>
@@ -198,11 +198,11 @@
 							</li>
 							<div class="service__line"></div>
 							<li class="service__common servece__item__price">
-								50$
+								60$
 							</li>
 							<div class="service__line"></div>
 						
-							<button class="button">Try Standart!</button>
+							<button class="button popup-button">Try Standart!</button>
 						</ul>
 					</div>
 
@@ -213,7 +213,7 @@
 						<div class="arrow"></div>
 						<ul class="service__item__more-info">	
 							<li class="service__common service__item__schedule">
-								2 lessons in a month
+								6 lessons in a month
 							</li>
 							<div class="service__line"></div>
 							<li class="service__common service__item__time">one lesson is 1 hour 30 minutes</li>
@@ -223,11 +223,11 @@
 							</li>
 							<div class="service__line"></div>
 							<li class="service__common servece__item__price">
-								50$
+								70$
 							</li>
 							<div class="service__line"></div>
 						
-							<button class="button">Try intensive!</button>
+							<button class="button popup-button">Try intensive!</button>
 						</ul>
 					</div>
 
@@ -242,12 +242,10 @@
 			<section class="contact-n-block-photo__row">
 				<div class="contact">
 					<h2 class="title" >Fill in the form and we will contact you</h2>
-					<form action="" class="contact__form">
-						<input class="input" type="text" value="name">
-						<div class="bg-text">name</div>
-						<input class="input" type="text" value="number or e-mail">
-						<div class="bg-text">number or e-mail</div>
-						<button class="button">send</button>
+					<form data-netlify="true" action="#succes-popup" class="contact__form">
+						<input class="input" type="text" name="name:" value="NAME">
+						<input class="input" type="email" name="mail:" value="NUMBER OR E-MAIL">
+						<button class="button success-popup-button">send</button>
 					</form>
 				</div>
 				<div class="block-photo"><img class="content-img" src="img/contacts.jpg" alt=""></div>
@@ -262,6 +260,22 @@
 	<footer class="footer">
 		made by <a href="">Rostyslav</a>
 	</footer>
+</div>
+
+<div class="popup-area"></div>
+<div class="popup">
+	<div class="title">Register now and get a free lesson!</div>
+	<div class="description">Fill in the form and we will contact you</div>
+	<form data-netlify="true" action="#succes-popup" class="contact__form">
+		<input class="input" type="text" name="name:" value="NAME">
+		<input class="input" type="email" name="mail:" value="NUMBER OR E-MAIL">
+		<button class="button success-popup-button">send</button>
+	</form>
+</div>
+
+<div class="success-popup" id="succes-popup">
+	<div class="title">Thank you!</div>
+	<div class="description">Wait for a letter!</div>
 </div>
 
 
