@@ -2,7 +2,7 @@
 
 const burgerMenu = document.querySelector('.burger-menu');
 const burgerMenuIcon = document.querySelector('.burger-menu-icon');
-const headerNavLink = document.getElementsByClassName('header__nav__link');
+const headerNavLink = document.getElementsByClassName('header__link');
 
 if (burgerMenu){
   burgerMenuIcon.addEventListener("click", function (e) {
@@ -58,14 +58,14 @@ sliderNextBtn.addEventListener('click', () => {
   }
 });
 
-const showMoreInfo = document.getElementsByClassName('service__item__name');
+const showMoreInfo = document.getElementsByClassName('service__name');
 const serviceArrow = document.getElementsByClassName('arrow');
   
 
 if(showMoreInfo){
   for (let i = 0; i < showMoreInfo.length; i++){
     showMoreInfo[i].addEventListener('click', function(){
-    const moreInfo = document.getElementsByClassName('service__item__more-info');
+    const moreInfo = document.getElementsByClassName('service__more-info');
     moreInfo[i].classList.toggle('_show-more-info');
     serviceArrow[i].classList.toggle('_active-arrow');
 

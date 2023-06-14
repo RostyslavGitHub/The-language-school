@@ -21,7 +21,7 @@ a{
 	bottom: 150px;
 }
 
-.wraper {
+.wrapper {
 	width: 100%;
 	background-color: #fcf8ec;
 	display: flex;
@@ -159,7 +159,7 @@ a{
 	display: flex;
 }
 
-.header__nav__link {
+.header__link {
 	font-size: 16px;
 	margin: 0px 20px; 
 	text-transform: uppercase;
@@ -247,18 +247,18 @@ a{
   padding: 0 15px;
 }
 
-.slider__item__photo {
+.slider__photo {
 	height: 200px;
 	width: auto;
 	margin: 12px;
 	border: 2px solid black;
 	box-shadow: 5px 6px 0px #22252a;
 }
-.slider__item__title {
+.slider__title {
 	margin: 10px;
 	font-size: 18px;
 }
-.slider__item__description {
+.slider__description {
 	font-size: 14px;
 	line-height: 1.1;
 	color: #817c78;
@@ -367,14 +367,14 @@ a{
 	background-color: black;
 }
 
-.service__item__more-info {
+.service__more-info {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-item: center;
 }
 
-.service__item__name {
+.service__name {
 	height: 70px;
 	width: 100%;
 	border: 2px solid black;
@@ -402,11 +402,11 @@ a{
 }
 
 
-.service__item__schedule {
+.service__schedule {
 	padding-top: 35px;
 }
 
-.service__item__time {}
+.service__time {}
 .servece__item__price {}
 
 
@@ -563,7 +563,7 @@ a{
 		width: 85%;
 		cursor: pointer;
 	}
-	.service__item__more-info {
+	.service__more-info {
 		transition: 0.5s;
 		position: absolute;
 		top: 0%;
